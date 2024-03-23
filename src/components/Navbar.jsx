@@ -21,7 +21,7 @@ const Navbar = () => {
   const links = (
     <>
       <li>
-        <NavLink to="/" className="text-base font-bold text-primary">
+        <NavLink to="/" className="text-base font-bold">
           Home
         </NavLink>
       </li>
@@ -33,11 +33,6 @@ const Navbar = () => {
       <li>
         <NavLink to="/jobs" className="text-base font-bold">
           Applied Jobs
-        </NavLink>
-      </li>
-      <li>
-        <NavLink to="/blogs" className="text-base font-bold">
-          Blog
         </NavLink>
       </li>
     </>

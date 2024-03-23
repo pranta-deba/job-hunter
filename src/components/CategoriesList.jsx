@@ -1,6 +1,16 @@
+import { useEffect, useState } from "react";
 import Category from "./Category";
 
-const CategorisList = () => {
+const CategoriesList = () => {
+  const [categories, setCategories] = useState([]);
+
+ useEffect(() => {
+    fetch("categories.json")
+      .then((res) => res.json())
+      .then((data) => setCategories(data));
+  }, []);
+
+
   return (
     <>
       <div className="my-16 max-w-[1280px] mx-auto">
@@ -11,15 +21,14 @@ const CategorisList = () => {
             need. Its your future
           </p>
         </div>
-        <div className="my-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
-          <Category />
-          <Category />
-          <Category />
-          <Category />
+        <div className="my-8 p-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
+          {
+            categories.map(category =>  <Category category={category} key={category.id}/>)
+          }
         </div>
       </div>
     </>
   );
 };
 
-export default CategorisList;
+export default CategoriesList;

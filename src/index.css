@@ -2,28 +2,43 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-*{
-    font-family: "Manrope", sans-serif;
+
+* {
+  font-family: "Manrope", sans-serif;
 }
+
 .animate-gradient {
-    background-size: 300%;
-    -webkit-animation: animatedgradient 6s ease infinite alternate;
-    -moz-animation: animatedgradient 6s ease infinite alternate;
-    animation: animatedgradient 6s ease infinite alternate;
-  }
-  
-  @keyframes animatedgradient {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
+  background-size: 300%;
+  -webkit-animation: animatedgradient 6s ease infinite alternate;
+  -moz-animation: animatedgradient 6s ease infinite alternate;
+  animation: animatedgradient 6s ease infinite alternate;
+}
+
+@keyframes animatedgradient {
+  0% {
+    background-position: 0% 50%;
   }
 
-  .primary-bg{
-    background: linear-gradient(90deg, rgba(126, 144, 254, 0.05) 0%, rgba(152, 115, 255, 0.05) 100%);
+  50% {
+    background-position: 100% 50%;
   }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.primary-bg {
+  background: linear-gradient(90deg, rgba(126, 144, 254, 0.05) 0%, rgba(152, 115, 255, 0.05) 100%);
+}
+
+.detailsBg {
+  background-image: url("../src/assets/images/bg1.png"), linear-gradient(90deg, rgba(126, 144, 254, 0.05) 0%, rgba(152, 115, 255, 0.05) 100%);
+  background-repeat: no-repeat;
+  background-position: left bottom;
+}
+
+.detailsBg2 {
+  border-radius: 8px;
+  background: linear-gradient(90deg, rgba(126, 144, 254, 0.10) 0%, rgba(152, 115, 255, 0.10) 100%);
+}
